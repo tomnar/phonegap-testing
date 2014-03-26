@@ -5,8 +5,8 @@ var WebSqlStore = function(successCallback, errorCallback) {
         this.db = window.openDatabase("EmployeeDB", "1.0", "Employee Demo DB", 200000);
         this.db.transaction(
                 function(tx) {
-                    //self.createTable(tx);
-                    //self.addSampleData(tx);
+                    self.createTable(tx);
+                    self.addSampleData(tx);
                 },
                 function(error) {
                     console.log('Transaction error: ' + error);
